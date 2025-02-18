@@ -1,0 +1,97 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Full viewport height */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Dark overlay for better text visibility */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin: 0.5rem;
+  animation: slideInFromRight 1s ease-out;
+}
+
+/* Add to your existing CSS file */
+.link-container {
+  display: flex;
+  justify-content: space-evenly; /* Distributes space evenly between and around content */
+  align-items: center;
+  flex-wrap: wrap; /* Ensures links wrap to next line on smaller screens */
+}
+
+.link-container a {
+  margin: 0 15px; /* Adds horizontal margin between links */
+  text-decoration: none; /* Optionally remove the underline */
+  color: white; /* Set the color to white */
+  background-color: rgba(255, 255, 255, 0.2); /* Add a slight background */
+  padding: 10px 20px; /* Add some padding */
+  border-radius: 5px; /* Round the corners */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.link-container a:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Change background on hover */
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
